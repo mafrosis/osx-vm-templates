@@ -104,8 +104,6 @@
         "../scripts/vmware.sh",
         "../scripts/parallels.sh",
         "../scripts/xcode-cli-tools.sh",
-        "../scripts/chef-omnibus.sh",
-        "../scripts/puppet.sh",
         "../scripts/add-network-interface-detection.sh",
         "../scripts/autologin.sh",
         "../scripts/system-update.sh",
