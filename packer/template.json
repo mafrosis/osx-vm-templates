@@ -109,12 +109,14 @@
         "../scripts/puppet.sh",
         "../scripts/add-network-interface-detection.sh",
         "../scripts/autologin.sh",
+        "../scripts/disable-screensaver.sh",
         "../scripts/system-update.sh",
         "../scripts/shrink.sh"
       ],
       "environment_vars": [
         "AUTOLOGIN={{user `autologin`}}",
         "CHEF_VERSION={{user `chef_version`}}",
+        "DISABLE_SCREENSAVER={{user `disable_screensaver`}}",
         "FACTER_VERSION={{user `facter_version`}}",
         "HIERA_VERSION={{user `hiera_version`}}",
         "INSTALL_VAGRANT_KEYS={{user `install_vagrant_keys`}}",
@@ -132,6 +134,7 @@
   "variables": {
     "autologin": "false",
     "chef_version": "none",
+    "disable_screensaver": "false",
     "facter_version": "none",
     "hiera_version": "none",
     "install_vagrant_keys": "true",

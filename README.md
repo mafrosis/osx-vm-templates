@@ -109,6 +109,14 @@ For some kinds of automated tasks, it may be necessary to have an active GUI log
 
 This was easily made possible thanks to Per Olofsson's [CreateUserPkg](http://magervalp.github.com/CreateUserPkg) utility, which was used to help create the box's vagrant user in the `prepare_iso` script, and which also supports generating the magic kcpassword file with a particular hash format to set up the auto-login.
 
+## Disable Screensaver
+
+The OSX screensaver can be completely disabled, by using the `disable_screensaver` user variable, which can be set to `1` or `true`, for example:
+
+`packer build -var disable_screensaver=true template.json`
+
+This make it _never_ possible for the screensaver to be switched back on, see [this answer](http://apple.stackexchange.com/a/135446/14997) for further information.
+
 ## Configuration management
 
 By default, the packer template does not install the Chef or Puppet configuration management tools. You can enable the installation of configuration management by setting the `chef_version`, `puppet_agent_version`, `puppet_version`, `facter_version`, and `hiera_version` variables to `latest`, or to a specific version.
